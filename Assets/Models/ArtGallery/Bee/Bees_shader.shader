@@ -1,4 +1,4 @@
-﻿Shader "GTA/SimplePfx" {
+﻿Shader "Gallery/Bees" {
    Properties
    {
        _MainTex ("Texture", 2D) = "white" {}
@@ -58,7 +58,7 @@
                float x = (v.texcoord.z + 0.5) * ts.x;//VertexID & Size of bake anim texture
                float y;
  
-               y = fmod(_Time.y, 1.0);//Loop animation
+               y = fmod(_Time.y, 1.0) * 4;//Loop animation
  
                float4 pos = tex2Dlod(_PosTex, float4(x, y, 0, 0));
                pos += v.vertex;
